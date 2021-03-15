@@ -2,14 +2,20 @@
 
 void decToOct(int n)
 {
-	int oct, r;
 	int i;
+	int arr[10];
 
-	r = n%8;
-	i = n/8;
-	oct = (i*10) + r;
+	for (i = 0; n > 0; i++)
+	{
+	    arr[i] = n%8;
+	    n = n/8;
+	}
 
-	printf("Octal no. of %d is : %d\n", n, oct);
+	printf("Conversion of no. %d in Octal is : ", n);
+	for(i = i-1; i >= 0; i--)
+	    printf("%d", arr[i]);
+
+	printf("\n");
 }
 
 int main()
