@@ -2,14 +2,20 @@
 
 void decToAnyBase(int n, int base)
 {
-	int r = 0, res = 0;
 	int i = 0;
+	int arr[10];
 
-	r = n%base;
-	i = n/base;
-	res = (i*10) + r;
+	for (i = 0; n > 0; i++)
+	{
+	    arr[i] = n%base;
+	    n = n/base;
+	}
 
-	printf("Conversion of no. %d in base %d is : %d\n", n, base, res);
+	printf("Conversion of no. %d in base %d is : ", n, base);
+	for(i = i-1; i >= 0; i--)
+	    printf("%d", arr[i]);
+
+	printf("\n");
 }
 
 int main()
