@@ -12,3 +12,7 @@ int main()
 
 	return 0;
 }
+
+
+// ptr = ptr + j    same as  &a[i + j]
+// ptr = ptr + 1 == &a[1] if i = 0
